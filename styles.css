@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.bodyContainer{
+    position: relative;
+    width: 1800px;
+    height: 100vh;
+    margin: 0px auto;
+    background-color: white;   
+}
+
+.bodyContainer video{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(34, 34, 34);
+    mix-blend-mode: overlay;   
+}
+
+.header{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.7);
+   
+}
+
+.headerLogo{
+    flex: 60%;
+}
+
+.navigation{
+    flex: 40%;
+}
+
+.headerLogo h1{
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0px 0px 10px gold;
+    margin: 0px 20px;
+    padding: 0px;
+}
+
+.navigation li{
+    display: inline-block;
+    list-style-type: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 10px gold;
+    margin: 10px;
+    padding: 10px;
+}
+
+.main{
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    
+}
+
+.mainImg{
+    flex: 50%;
+    margin: 25px auto;
+}
+
+.mainInfo{
+    flex: 50%;
+    margin: 50px auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mainImg img{
+    width: 375px;
+    height: auto;
+    display: block;
+    margin: 10px 0px;
+    box-shadow: 0px 0px 10px gold;
+}
+
+.mainInfo h1{
+    font-size: 3rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.mainInfo h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.mainInfo p{
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+}
+
+.container{
+    position: relative;
+    width: 60%;
+    height: auto;
+    margin: 0px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#prev{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 10%;
+    z-index: 1;
+   
+}
+
+#next{
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 10%; 
+    z-index: 1;
+   
+}
+
+.cardContainer{
+    display: flex; 
+    overflow-x: scroll;
+    width: 100%;
+    margin: 0 auto;    
+}
+
+
+.card{ 
+    margin: 0px auto;    
+}
+
+.card img{
+    width: 175px;
+    height: auto;
+    margin: 0px;
+    padding: 5px;
+}
+
+.card h1, .card h2, .card p{
+    color: white;
+    display: none;
+}
+
