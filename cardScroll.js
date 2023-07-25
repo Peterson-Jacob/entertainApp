@@ -1,10 +1,10 @@
 window.onload = function(){
     function loopNext(){
-        $('#cardContainer').stop().animate({scrollLeft:'+=50'}, 'fast', 'linear', loopNext);
+        $('#cardContainer').stop().animate({scrollLeft:'+=75'}, 'fast', 'linear', loopNext);
     }
 
     function loopPrev(){
-        $('#cardContainer').stop().animate({scrollLeft:'-=50'}, 'fast', 'linear', loopPrev);
+        $('#cardContainer').stop().animate({scrollLeft:'-=75'}, 'fast', 'linear', loopPrev);
     }
 
     function stop(){
