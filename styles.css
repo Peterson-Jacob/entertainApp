@@ -10,9 +10,6 @@ body{
 
 .bodyContainer{
     position: relative;
-    width: 1800px;
-    height: 100vh;
-    margin: 0px auto;
     background-color: white;   
 }
 
@@ -32,7 +29,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgb(34, 34, 34);
     mix-blend-mode: overlay;   
 }
@@ -41,92 +38,60 @@ body{
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: row;
     background-color: rgba(0, 0, 0, 0.7);
    
 }
 
-.headerLogo{
-    flex: 60%;
-}
-
-.navigation{
-    flex: 40%;
-}
-
 .headerLogo h1{
-    font-size: 4rem;
     color: white;
     text-shadow: 0px 0px 10px gold;
-    margin: 0px 20px;
-    padding: 0px;
+}
+
+.headerLogo h1 i{
+    color: black;
 }
 
 .navigation li{
     display: inline-block;
     list-style-type: none;
-    font-size: 2rem;
     font-weight: bold;
     color: white;
     text-shadow: 0px 0px 10px gold;
-    margin: 10px;
-    padding: 10px;
 }
 
 .main{
     position: relative;
-    width: 60%;
-    margin: 0 auto;
     display: flex;
-    flex-direction: row;
     z-index: 1;
     
 }
 
-.mainImg{
-    flex: 50%;
-    margin: 25px auto;
-}
-
 .mainInfo{
-    flex: 50%;
-    margin: 50px auto;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .mainImg img{
-    width: 375px;
-    height: auto;
-    display: block;
-    margin: 10px 0px;
+    display: block; 
     box-shadow: 0px 0px 10px gold;
 }
 
 .mainInfo h1{
-    font-size: 3rem;
-    text-align: center;
-    padding: 10px;
+    text-align: center;  
 }
 
 .mainInfo h2{
-    font-size: 2rem;
     text-align: center;
-    padding: 10px;
 }
 
-.mainInfo p{
-    font-size: 1rem;
-    text-align: center;
-    padding: 10px;
+.mainInfo p{  
+   text-align: center;
 }
 
 .container{
     position: relative;
-    width: 60%;
     height: auto;
-    margin: 0px auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 ::-webkit-scrollbar {
@@ -137,18 +102,27 @@ body{
     position: absolute;
     left: 0;
     height: 100%;
-    width: 10%;
+    width: 5%;
     z-index: 1;
-   
+    
+}
+
+#prev i{
+    color: white;
+    text-align: center;
 }
 
 #next{
     position: absolute;
     right: 0;
     height: 100%;
-    width: 10%; 
-    z-index: 1;
-   
+    width: 5%; 
+    z-index: 1; 
+}
+
+#next i{
+    color: white;
+    text-align: right;
 }
 
 .cardContainer{
@@ -158,20 +132,353 @@ body{
     margin: 0 auto;    
 }
 
-
 .card{ 
     margin: 0px auto;    
 }
 
 .card img{
-    width: 175px;
     height: auto;
     margin: 0px;
     padding: 5px;
 }
 
 .card h1, .card h2, .card p{
-    color: white;
     display: none;
 }
 
+
+@media only screen and (max-width: 600px) {
+
+    .bodyContainer{
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+    }
+
+    .header{
+        flex-direction: column;
+    }
+
+    .headerLogo{
+        flex: 100%;
+    }
+    
+    .navigation{
+        flex: 100%;
+        margin: 0 auto;
+    }
+    
+    .headerLogo h1{
+        font-size: 2rem;
+        text-align: center;
+        margin: 3px auto;
+        padding: 0px;
+    }
+    
+    .headerLogo h1 i{
+        font-size: 1rem;
+    }
+    
+    .navigation li{
+        font-size: 1rem;
+        margin: 0px 10px;
+        padding: 0 auto 2px auto;
+    }
+
+    .main{
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;    
+    }
+    
+    .mainImg{
+        flex: 100%;
+        margin: 10px auto 0px auto;
+    }
+    
+    .mainInfo{
+        flex: 100%;
+        margin: 0px;
+        
+    }
+    
+    .mainImg img{
+        width: 225px;
+        margin: 5px auto;
+    }
+    
+    .mainInfo h1{
+        font-size: 2rem;
+        padding: 2px;
+    }
+    
+    .mainInfo h2{
+        font-size: 1rem;
+        padding: 2px;
+    }
+    
+    .mainInfo p{
+        font-size: 1rem;
+        padding: 2px;
+    }
+
+    .container{
+        width: 100%;
+        margin: 10px auto 0px auto;
+    }
+    
+    #prev i{
+        font-size: 2rem;
+        margin: 75px auto;
+    }
+    
+    #next i{
+        font-size: 2rem;
+        margin: 75px auto;
+    }
+        
+    .card img{
+        width: 125px;
+    }
+
+}
+
+@media only screen and (min-width: 601px) {
+
+    .bodyContainer{
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+    }
+
+    .header{
+        flex-direction: column;
+    }
+
+    .headerLogo{
+        flex: 100%;
+    }
+    
+    .navigation{
+        flex: 100%;
+        margin: 0 auto;
+    }
+    
+    .headerLogo h1{
+        font-size: 2.75rem;
+        text-align: center;
+        margin: 0px auto;
+        padding: 0px;
+    }
+    
+    .headerLogo h1 i{
+        font-size: 1.75rem;
+    }
+    
+    .navigation li{
+        font-size: 1.75rem;
+        margin: 0px 10px;
+        padding: 0 auto 2px auto;
+    }
+
+    .main{
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;    
+    }
+    
+    .mainImg{
+        flex: 100%;
+        margin: 10px auto;
+    }
+    
+    .mainInfo{
+        flex: 100%;
+        margin: 0px;
+        
+    }
+    
+    .mainImg img{
+        width: 400px;
+        margin: 5px auto;
+    }
+    
+    .mainInfo h1{
+        font-size: 2.75rem;
+        padding: 3px;
+    }
+    
+    .mainInfo h2{
+        font-size: 1.75rem;
+        padding: 5px;
+    }
+    
+    .mainInfo p{
+        font-size: 1.25rem;
+        padding: 5px;
+    }
+
+    .container{
+        width: 100%;
+        margin: 10px auto 0px auto;
+    }
+    
+    #prev i{
+        font-size: 2rem;
+        margin: 100px auto;
+    }
+    
+    #next i{
+        font-size: 2rem;
+        margin: 100px auto;
+    }
+        
+    .card img{
+        width: 175px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    
+    .header{
+        flex-direction: row;
+    }
+
+    .headerLogo{
+        flex: 60%;
+    }
+    
+    .navigation{
+        flex: 40%;
+    }
+    
+    .headerLogo h1{
+        text-align: start;
+        margin: 0px 25px;
+        padding: 5px;
+    }
+    
+    .navigation li{
+        margin: 20px 15px 0px 15px;
+        padding: 5px auto;
+    }
+
+    .main{
+        width: 70%;
+        margin: 10px auto;
+        flex-direction: row;    
+    }
+    
+    .mainImg{
+        flex: 55%;
+        margin: 10px auto;
+       
+    }
+    
+    .mainInfo{
+        flex: 45%;
+        margin: 10px auto;
+        
+    }
+    
+    .mainImg img{
+        width: 225px;
+        margin: 5px 0px;
+    }
+    
+    .mainInfo h1{
+        margin-top: 75px;
+    }
+
+    .container{
+        width: 70%;
+       
+    }
+    
+    #prev i{
+        margin: 75px auto;
+    }
+    
+    #next i{
+        margin: 75px auto;
+    }
+        
+    .card img{
+        width: 125px;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .bodyContainer{
+        height: 100vh;  
+    }
+
+    .headerLogo h1{
+        font-size: 3rem;
+    }
+    
+    .headerLogo h1 i{
+        font-size: 2rem;
+    }
+    
+    .navigation li{
+        font-size: 2rem;  
+    }
+ 
+    .mainImg img{
+        width: 300px;
+    }
+    
+    .mainInfo h1{
+        font-size: 3rem;
+        padding: 5px;
+    }
+
+    .main h2{
+        font-size: 2rem;
+        padding: 5px;
+    }
+
+    .main p{
+        font-size: 1.25rem;
+        padding: 5px;
+    }
+        
+    .card img{
+        width: 150px;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+
+    .mainImg img{
+        width: 350px;
+    }
+
+    #prev i{
+        margin: 100px auto;
+    }
+    
+    #next i{
+        margin: 100px auto;
+    }
+
+}
+
+@media only screen and (min-width: 1800px){
+
+    .bodyContainer{
+        width: 1800px;
+    }
+
+    .mainImg img{
+        width: 400px;
+    }
+
+    .card img{
+        width: 175px;
+    }
+}
