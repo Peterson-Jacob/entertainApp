@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,900;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -38,17 +40,20 @@ body{
     position: relative;
     z-index: 1;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
    
 }
 
 .headerLogo h1{
     color: white;
-    text-shadow: 0px 0px 10px gold;
+    text-shadow: 0px 0px 30px navy;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
 }
 
 .headerLogo h1 i{
     color: black;
+    text-shadow: 0px 0px 20px goldenrod;
 }
 
 .navigation li{
@@ -56,7 +61,9 @@ body{
     list-style-type: none;
     font-weight: bold;
     color: white;
-    text-shadow: 0px 0px 10px gold;
+    text-shadow: 0px 0px 20px navy;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
 }
 
 .main{
@@ -68,12 +75,13 @@ body{
 
 .mainInfo{
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 10px navy;
 }
 
 .mainImg img{
     display: block; 
-    box-shadow: 0px 0px 10px gold;
+    box-shadow: 0px 0px 10px navy;
 }
 
 .mainInfo h1{
@@ -91,7 +99,9 @@ body{
 .container{
     position: relative;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 128, 0.8);
+    
+   
 }
 
 ::-webkit-scrollbar {
@@ -151,7 +161,7 @@ body{
 
     .bodyContainer{
         width: 100%;
-        height: auto;
+        height: 100vh;
         margin: 0px auto;
     }
 
@@ -176,7 +186,7 @@ body{
     }
     
     .headerLogo h1 i{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     
     .navigation li{
@@ -247,7 +257,7 @@ body{
 
     .bodyContainer{
         width: 100%;
-        height: auto;
+        height: 100vh;
         margin: 0px auto;
     }
 
@@ -340,6 +350,9 @@ body{
 
 @media only screen and (min-width: 992px) {
 
+    .bodyContainer{
+        height: 100vh;  
+    }
     
     .header{
         flex-direction: row;
@@ -475,10 +488,10 @@ body{
     }
 
     .mainImg img{
-        width: 400px;
+        width: 375px;
     }
 
     .card img{
-        width: 175px;
+        width: 150px;
     }
 }
