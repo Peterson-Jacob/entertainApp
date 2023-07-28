@@ -150,6 +150,7 @@ body{
     height: auto;
     margin: 0px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .card h1, .card h2, .card p{
@@ -305,6 +306,7 @@ body{
     .mainInfo{
         flex: 100%;
         margin: 0px;
+       
         
     }
     
@@ -489,9 +491,11 @@ body{
 
     .mainImg img{
         width: 375px;
+        
     }
 
     .card img{
         width: 150px;
+      
     }
 }
