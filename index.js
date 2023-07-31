@@ -3,6 +3,8 @@ window.onload = function(){
     const cont = document.getElementById('cardContainer');
     const mImg = document.getElementById('imgId');
     const title = document.getElementById('mhOne');
+    const cert = document.getElementById('certificate');
+    const numShows = document.getElementById('numEpisodes');
     const rate = document.getElementById('mhTwo');
     const series = document.getElementById('mRun');
     const release = document.getElementById('mRelease');
@@ -19,6 +21,7 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
 .then(response => response.json())
 .then ( data =>{
     let text = "";
+    let textTwo = "";
     let i = 0;
     let y = 0;
     const dataArray = [];
@@ -44,6 +47,14 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
         }
     };
 
+    for (let x = 51; x <= 100; x++) {
+        if(x == 51){
+        textTwo += "ids=" + showArray[x];
+        }else{
+            textTwo += "&ids=" + showArray[x];
+        }
+    };
+
 
     function mainFunction(num){
 
@@ -54,6 +65,10 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
                 title.textContent = newArray[num].title.title;
 
                 rate.textContent = "IMDb Rating: " + newArray[num].ratings.rating;
+                console.log(newArray[num].certificate);
+                cert.textContent = newArray[num].certificate;
+                numShows.textContent = newArray[num].title.numberOfEpisodes + " Episodes";
+
                     if(newArray[num].title.seriesEndYear == undefined ){
                         series.textContent = "Start " + newArray[num].title.seriesStartYear + " - present";
                     }else{
@@ -103,10 +118,29 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
 
     cardFunction(0);
 
+    fetch("https://imdb8.p.rapidapi.com/title/get-meta-data?" + textTwo + "&region=US", {
+	"method": "GET",
+    headers  
+})
+
+.then(newResponse => newResponse.json())
+.then(newData =>{
+    
+    let z = 51;
+    while (newData[showArray[z]]) {
+        newArray.push(newData[showArray[z]]);
+        z++;
+    }
+    
+    cardFunction(50);
+
+    
+
 });
 })
 .catch(err => {
     console.error(err);
  }); 
  
-}
+}); 
+};
