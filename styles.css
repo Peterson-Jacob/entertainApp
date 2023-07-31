@@ -59,11 +59,16 @@ body{
 .navigation li{
     display: inline-block;
     list-style-type: none;
-    font-weight: bold;
     color: white;
-    text-shadow: 0px 0px 20px navy;
+    text-shadow: 0px 0px 40px navy;
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
+    cursor: pointer;
+}
+
+.navigation li:hover{
+    color: goldenrod;
+    font-weight: 700;
 }
 
 .main{
@@ -77,11 +82,12 @@ body{
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0px 0px 10px navy;
+    border-radius: 10px;
 }
 
 .mainImg img{
     display: block; 
-    box-shadow: 0px 0px 10px navy;
+    box-shadow: 0px 0px 20px navy;
 }
 
 .mainInfo h1{
@@ -99,8 +105,9 @@ body{
 .container{
     position: relative;
     height: auto;
-    background-color: rgba(0, 0, 128, 0.8);
-    
+    background-color: rgba(0, 0, 128, 0.7);
+    border-radius: 10px;
+    padding: 5px;
    
 }
 
@@ -162,7 +169,7 @@ body{
 
     .bodyContainer{
         width: 100%;
-        height: 100vh;
+        height: auto;
         margin: 0px auto;
     }
 
@@ -182,7 +189,7 @@ body{
     .headerLogo h1{
         font-size: 2rem;
         text-align: center;
-        margin: 3px auto;
+        margin: 2px auto;
         padding: 0px;
     }
     
@@ -192,7 +199,7 @@ body{
     
     .navigation li{
         font-size: 1rem;
-        margin: 0px 10px;
+        margin: 1px 15px;
         padding: 0 auto 2px auto;
     }
 
@@ -214,7 +221,8 @@ body{
     }
     
     .mainImg img{
-        width: 225px;
+        width: 250px;
+        height: 375px;
         margin: 5px auto;
     }
     
@@ -235,7 +243,7 @@ body{
 
     .container{
         width: 100%;
-        margin: 10px auto 0px auto;
+        margin: 0px auto;
     }
     
     #prev i{
@@ -250,6 +258,7 @@ body{
         
     .card img{
         width: 125px;
+        height: 188px;
     }
 
 }
@@ -258,7 +267,7 @@ body{
 
     .bodyContainer{
         width: 100%;
-        height: 100vh;
+        height: auto;
         margin: 0px auto;
     }
 
@@ -278,7 +287,7 @@ body{
     .headerLogo h1{
         font-size: 2.75rem;
         text-align: center;
-        margin: 0px auto;
+        margin: 2px auto;
         padding: 0px;
     }
     
@@ -288,7 +297,7 @@ body{
     
     .navigation li{
         font-size: 1.75rem;
-        margin: 0px 10px;
+        margin: 1px 20px;
         padding: 0 auto 2px auto;
     }
 
@@ -306,12 +315,12 @@ body{
     .mainInfo{
         flex: 100%;
         margin: 0px;
-       
         
     }
     
     .mainImg img{
-        width: 400px;
+        width: 350px;
+        height: 550px;
         margin: 5px auto;
     }
     
@@ -332,7 +341,7 @@ body{
 
     .container{
         width: 100%;
-        margin: 10px auto 0px auto;
+        margin: 25px auto 0px auto;
     }
     
     #prev i{
@@ -347,13 +356,14 @@ body{
         
     .card img{
         width: 175px;
+        height: 275px;
     }
 }
 
 @media only screen and (min-width: 992px) {
 
     .bodyContainer{
-        height: 100vh;  
+        height: auto;  
     }
     
     .header{
@@ -398,7 +408,8 @@ body{
     }
     
     .mainImg img{
-        width: 225px;
+        width: 250px;
+        height: 375px;
         margin: 5px 0px;
     }
     
@@ -421,6 +432,7 @@ body{
         
     .card img{
         width: 125px;
+        height: 188px;
     }
     
 }
@@ -428,7 +440,7 @@ body{
 @media only screen and (min-width: 1200px) {
 
     .bodyContainer{
-        height: 100vh;  
+        height: auto;  
     }
 
     .headerLogo h1{
@@ -440,11 +452,13 @@ body{
     }
     
     .navigation li{
-        font-size: 2rem;  
+        font-size: 2rem;
+        margin: 20px 25px 0px 25px;  
     }
  
     .mainImg img{
         width: 300px;
+        height: 425px;
     }
     
     .mainInfo h1{
@@ -464,13 +478,20 @@ body{
         
     .card img{
         width: 150px;
+        height: 225px;
     }
 }
 
 @media only screen and (min-width: 1600px){
 
+
+    .navigation li{
+        margin: 20px 35px 0px 35px;  
+    }
+
     .mainImg img{
-        width: 350px;
+        width: 325px;
+        height: 500px;
     }
 
     #prev i{
@@ -479,6 +500,11 @@ body{
     
     #next i{
         margin: 100px auto;
+    }
+
+    .card img{
+        width: 150px;
+        height: 250px;
     }
 
 }
@@ -490,12 +516,8 @@ body{
     }
 
     .mainImg img{
-        width: 375px;
-        
+       width: 350px;
+       height: 550px;
     }
 
-    .card img{
-        width: 150px;
-      
-    }
 }
