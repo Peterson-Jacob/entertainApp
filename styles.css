@@ -216,7 +216,8 @@ body{
     
     .mainInfo{
         flex: 100%;
-        margin: 0px;
+        margin: 5px;
+        padding: 10px;
         
     }
     
@@ -227,18 +228,18 @@ body{
     }
     
     .mainInfo h1{
-        font-size: 2rem;
-        padding: 2px;
+        font-size: 2.5rem;
+        padding: 4px;
     }
     
     .mainInfo h2{
-        font-size: 1rem;
-        padding: 2px;
+        font-size: 1.5rem;
+        padding: 3px;
     }
     
     .mainInfo p{
         font-size: 1rem;
-        padding: 2px;
+        padding: 3px;
     }
 
     .container{
@@ -257,8 +258,9 @@ body{
     }
         
     .card img{
-        width: 125px;
-        height: 188px;
+        width: 100px;
+        height: 175px;
+        padding: 3px;
     }
 
 }
@@ -319,29 +321,29 @@ body{
     }
     
     .mainImg img{
-        width: 350px;
-        height: 550px;
+        width: 375px;
+        height: 600px;
         margin: 5px auto;
     }
     
     .mainInfo h1{
-        font-size: 2.75rem;
-        padding: 3px;
+        font-size: 3rem;
+        padding: 5px;
     }
     
     .mainInfo h2{
-        font-size: 1.75rem;
-        padding: 5px;
+        font-size: 2rem;
+        padding: 4px;
     }
     
     .mainInfo p{
-        font-size: 1.25rem;
-        padding: 5px;
+        font-size: 1.5rem;
+        padding: 3px;
     }
 
     .container{
         width: 100%;
-        margin: 25px auto 0px auto;
+        margin: 10px auto 0px auto;
     }
     
     #prev i{
@@ -355,8 +357,8 @@ body{
     }
         
     .card img{
-        width: 175px;
-        height: 275px;
+        width: 150px;
+        height: 250px;
     }
 }
 
@@ -414,7 +416,7 @@ body{
     }
     
     .mainInfo h1{
-        margin-top: 75px;
+        margin-top: 25px;
     }
 
     .container{
@@ -439,8 +441,9 @@ body{
 
 @media only screen and (min-width: 1200px) {
 
+
     .bodyContainer{
-        height: auto;  
+        height: 100vh;
     }
 
     .headerLogo h1{
@@ -484,7 +487,7 @@ body{
 
 @media only screen and (min-width: 1600px){
 
-
+ 
     .navigation li{
         margin: 20px 35px 0px 35px;  
     }
