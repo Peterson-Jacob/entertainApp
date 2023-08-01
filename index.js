@@ -65,7 +65,6 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
                 title.textContent = newArray[num].title.title;
 
                 rate.textContent = "IMDb Rating: " + newArray[num].ratings.rating;
-                console.log(newArray[num].certificate);
                 cert.textContent = newArray[num].certificate;
                 numShows.textContent = newArray[num].title.numberOfEpisodes + " Episodes";
 
