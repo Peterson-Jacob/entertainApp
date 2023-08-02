@@ -1,4 +1,29 @@
-window.onload = function(){
+// window.onload = function(){
+   
+//     let showFetch = "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows";
+//     Display(showFetch);
+// }
+
+function Shows(){
+    $('.card').remove();
+    let showFetch = "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows";
+    Display(showFetch);
+}
+
+function Movies(){
+    $('.card').remove();
+    let movieFetch = "https://imdb8.p.rapidapi.com/title/get-top-rated-movies"
+    Display(movieFetch);
+}
+
+function Upcoming(){
+    $('.card').remove();
+    let upcomingFetch = "https://imdb8.p.rapidapi.com/title/get-coming-soon-movies?homeCountry=US&purchaseCountry=US&currentCountry=US";
+    Display(upcomingFetch); 
+}
+
+
+function Display(call){
 
     const cont = document.getElementById('cardContainer');
     const mImg = document.getElementById('imgId');
@@ -14,7 +39,7 @@ window.onload = function(){
         'x-rapidapi-key': ''
       };
 
-fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
+fetch( call, {
 	"method": "GET",
     headers
 })
@@ -27,8 +52,10 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
     const dataArray = [];
     const showArray = [];
     const newArray = [];
-    
-  
+    dataArray.length = 0;
+    showArray.length = 0;
+    newArray.length = 0;
+
     while(data[i]){
         dataArray.push(data[i].id);
         i++;
@@ -65,21 +92,30 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
                 title.textContent = newArray[num].title.title;
 
                 rate.textContent = "IMDb Rating: " + newArray[num].ratings.rating;
-                cert.textContent = newArray[num].certificate;
-                numShows.textContent = newArray[num].title.numberOfEpisodes + " Episodes";
+                cert.textContent = "Rated: " + newArray[num].certificate;
 
+                if(newArray[num].title.numberOfEpisodes == undefined){
+                    numShows.textContent = "";
+                }else{
+                numShows.textContent = newArray[num].title.numberOfEpisodes + " Episodes";
+                }
+
+                    if(newArray[num].title.seriesStartYear == undefined){
+                        series.textContent == "";
+                    }else{
                     if(newArray[num].title.seriesEndYear == undefined ){
                         series.textContent = "Start " + newArray[num].title.seriesStartYear + " - present";
                     }else{
                         series.textContent = "Start " + newArray[num].title.seriesStartYear + " - End " + newArray[num].title.seriesEndYear;
                     };
-        
+                };
                 release.textContent = "Release Date: " + newArray[num].releaseDate;
     }
   
  
 
     function cardFunction(v){
+
         for(let s = v; s < newArray.length; s++){
             const div = document.createElement('div');
             const img = document.createElement('img');
@@ -94,7 +130,9 @@ fetch("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", {
 
                     mainFunction(s);
                 }
+             
         }
+
 
             mainFunction(0);
     }
