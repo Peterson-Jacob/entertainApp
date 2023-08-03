@@ -1,23 +1,30 @@
-// window.onload = function(){
-   
-//     let showFetch = "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows";
-//     Display(showFetch);
-// }
+
+function Style(){
+    document.getElementById("open").style.display = "none";
+    document.getElementById("header").style.display = "flex";
+    document.getElementById("mainImg").style.display = "none";
+    document.getElementById("mainInfo").style.display = "none";
+    document.getElementById("container").style.display = "none";
+}
 
 function Shows(){
     $('.card').remove();
+    Style();
     let showFetch = "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows";
     Display(showFetch);
 }
 
 function Movies(){
     $('.card').remove();
+    Style();
+    document.getElementById('mRun').textContent = "";
     let movieFetch = "https://imdb8.p.rapidapi.com/title/get-top-rated-movies"
     Display(movieFetch);
 }
 
 function Upcoming(){
     $('.card').remove();
+    document.getElementById('mRun').textContent = "";
     let upcomingFetch = "https://imdb8.p.rapidapi.com/title/get-coming-soon-movies?homeCountry=US&purchaseCountry=US&currentCountry=US";
     Display(upcomingFetch); 
 }
@@ -110,6 +117,10 @@ fetch( call, {
                     };
                 };
                 release.textContent = "Release Date: " + newArray[num].releaseDate;
+
+                document.getElementById("mainImg").style.display = "block";
+                document.getElementById("mainInfo").style.display = "block";
+                document.getElementById("container").style.display = "block";
     }
   
  
