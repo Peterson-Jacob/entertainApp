@@ -36,10 +36,77 @@ body{
     mix-blend-mode: overlay;   
 }
 
+.open{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+    width: 90%;
+    height: 90%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.open h1{
+    font-size: 6rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 30px navy;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+}
+
+.open h1 i{
+    font-size: 5rem;
+    color: black;
+    text-shadow: 0px 0px 20px goldenrod;
+}
+
+.open p{
+    font-size: 3rem;
+    text-align: center;
+    width: 80%;
+    margin: 25px auto;
+    color: white;
+}
+.openNav{
+    width: 80%;
+    margin: 200px auto;
+}
+
+.openNav ul{
+    display: flex;
+    align-items: stretch;
+    justify-content:center;
+    width: 100%;
+}
+
+.openNav li{
+    font-size: 2rem;
+    margin: 0 100px;
+    padding: 15px;
+    border: 5px solid navy;
+    border-radius: 40px;
+    display: inline-block;
+    list-style-type: none;
+    color: white;
+    text-shadow: 0px 0px 40px navy;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    cursor: pointer;  
+}
+
+.openNav li:hover{
+    background-color: rgba(0, 0, 190, 0.8);
+}
+
 .header{
     position: relative;
     z-index: 1;
-    display: flex;
+    display: none;
     background-color: rgba(0, 0, 0, 0.6);
    
 }
@@ -83,8 +150,12 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0px 0px 10px navy;
     border-radius: 10px;
+    display: none;
 }
 
+.mainImg{
+    display: none;
+}
 .mainImg img{
     display: block; 
     box-shadow: 0px 0px 20px navy;
@@ -108,6 +179,7 @@ body{
     background-color: rgba(0, 0, 128, 0.7);
     border-radius: 10px;
     padding: 5px;
+    display: none;
    
 }
 
